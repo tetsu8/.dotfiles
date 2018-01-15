@@ -80,6 +80,10 @@ endif
 set encoding=utf-8
 set fenc=utf-8
 set fileencodings=utf-8,cp932
+"colorscheme
+syntax on
+set background=dark
+colorscheme solarized
 " バックアップファイルを作らない
 set nobackup
 " スワップファイルを作らない
