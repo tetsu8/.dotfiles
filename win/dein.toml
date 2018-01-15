@@ -4,3 +4,5 @@ repo = 'altercation/vim-colors-solarized'
 repo = 'Shougo/unite.vim'
 [[plugins]]
 repo = 'Shougo/neocomplete.vim'
+[[plugins]]
+repo = 'Shougo/neomru.vim'
