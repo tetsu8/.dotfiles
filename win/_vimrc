@@ -170,7 +170,6 @@ nmap <C-v> <C-v>
 "コマンド入力ではC-vでペースト
 cmap <C-v> <C-v>
 
-
 " 新しいウィンドウを下に開く
 set splitbelow
 " 新しいウィンドウを右に開く
@@ -199,6 +198,3 @@ nnoremap [unite]l :<C-u>Unite line<CR>
 nnoremap [unite]d :<C-u>Unite file_rec/git<CR>
 nnoremap [unite]h :<C-u>Unite history/yank<CR>
 nnoremap [unite]u :<C-u>Unite file_mru buffer<CR>
-
-
-
