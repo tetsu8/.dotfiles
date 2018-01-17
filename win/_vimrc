@@ -103,19 +103,21 @@ set undodir=~/AppData/Local/Temp
 " 見た目系
 " 行番号を表示
 set number
-" 現在の行を強調表示
-set cursorline
-" 現在の行を強調表示（縦）
-set cursorcolumn
+" 現在の行を強調表示(横)
+"set cursorline
+" 現在の行を強調表示(縦)
+"set cursorcolumn
 " 行末の1文字先までカーソルを移動できるように
 set virtualedit=onemore
 " インデント関連
 set smartindent
 set tabstop=4
-set softtabstop=4
 set shiftwidth=4
+set softtabstop=4
 set autoindent
 set noexpandtab
+" 不可視文字を可視化(タブが「->」と表示される)
+set list listchars=tab:->
 " ビープ音を可視化
 set visualbell
 " 括弧入力時の対応する括弧を表示
@@ -131,8 +133,6 @@ nnoremap k gk
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
 " Tab系
-" 不可視文字を可視化(タブが「?-」と表示される)
-set list listchars=tab:\?\-
 " Tab文字を半角スペースにする
 set expandtab
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
@@ -155,6 +155,9 @@ set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 "リマップ
+"コロンセミコロン入れ替え
+noremap ; :
+noremap : ;
 "画面移動のリマップ
 nnoremap s <Nop>
 nnoremap sj <C-w>j
