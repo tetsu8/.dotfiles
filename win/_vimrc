@@ -131,6 +131,8 @@ nnoremap j gj
 nnoremap k gk
 "文字コードと改行コードステータスバーに表示
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+"折り返ししない
+set nowrap
 
 " Tab系
 " Tab文字を半角スペースにする
@@ -192,7 +194,7 @@ let g:unite_source_history_yank_enable=1
 "ESC2回で終了
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
-"keymap
+"unite unitekeymap
 nnoremap [unite]fn :<C-u>Unite file/new<CR>
 nnoremap [unite]dn :<C-u>Unite directory/new<CR>
 nnoremap [unite]b :<C-u>Unite buffer<CR>
