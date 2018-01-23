@@ -97,6 +97,8 @@ set autoread
 set hidden
 " 入力中のコマンドをステータスに表示する
 set showcmd
+"補完を有効化
+set wildmenu
 "undofileの保存先変更
 set undodir=~/AppData/Local/Temp
 
@@ -179,6 +181,10 @@ cmap <C-v> <C-v>
 set splitbelow
 " 新しいウィンドウを右に開く
 set splitright
+
+"autocmd vimenter * Vim
+"g:vimfiler_as_default_explorer=1
+let g:vaffle_auto_cd=1
 
 "Unite関連
 "prefix key
