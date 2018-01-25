@@ -112,12 +112,12 @@ set number
 " 行末の1文字先までカーソルを移動できるように
 set virtualedit=onemore
 " インデント関連
-set smartindent
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set autoindent
-set expandtab
+set smartindent
 " 不可視文字を可視化(タブが「->」と表示される)
 set list listchars=tab:->
 " ビープ音を可視化
@@ -148,7 +148,9 @@ set wrapscan
 " 検索語をハイライト表示
 set hlsearch
 " ESC連打でハイライト解除
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
+nnoremap <ESC><ESC> :nohlsearch<CR>
+"インサートからノーマル移行時にIMEをOff
+inoremap <ESC> <ESC>:set iminsert=0<CR>
 
 "リマップ
 "コロンセミコロン入れ替え
