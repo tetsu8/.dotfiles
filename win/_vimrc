@@ -119,8 +119,8 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 set smartindent
-" 不可視文字を可視化(タブが「->」と表示される)
-set list listchars=tab:>-,trail:_,eol:~,extends:>,precedes:<,nbsp:%
+" 不可視文字を可視化(タブが「>-」と表示される)
+set list listchars=tab:»-,trail:_,eol:~,extends:>,precedes:<,nbsp:%
 "全角スペースをハイライト表示
 function! ZenkakuSpace()
     highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
