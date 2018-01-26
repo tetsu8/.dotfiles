@@ -88,6 +88,7 @@ set imsearch=-1
 syntax on
 set background=dark
 colorscheme solarized
+let g:solarized_terminal=1
 " バックアップファイルを作らない
 set nobackup
 " スワップファイルを作らない
