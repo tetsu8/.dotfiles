@@ -1,12 +1,24 @@
+#ColorScheme
 [[plugins]]
 repo = 'altercation/vim-colors-solarized'
+#unite
 [[plugins]]
 repo = 'Shougo/unite.vim'
+#unite用
 [[plugins]]
 repo = 'Shougo/neomru.vim'
+#File exproler
 [[plugins]]
 repo = 'cocopon/vaffle.vim'
+#easy motion
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
+#分割画面リサイズ
 [[plugins]]
 repo = 'simeji/winresizer'
+#ctags自動生成
+[[plugins]]
+repo = 'soramugi/auto-ctags.vim'
+#git操作
+[[plugins]]
+repo = 'tpope/vim-fugitive'

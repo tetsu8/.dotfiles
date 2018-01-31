@@ -1,0 +1,17 @@
+syntax on
+set number
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set autoindent
+set smartindent
+
+noremap ; :
+noremap : ;
+
+nnoremap <ESC><ESC> :nohlsearch<CR>
