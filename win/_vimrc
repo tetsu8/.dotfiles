@@ -74,6 +74,17 @@ if dein#check_install()
   call dein#install()
 endif
 
+
+"--------------------------------------
+"FilteType毎のインデント設定
+"--------------------------------------
+augroup fielTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.cs setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead *.cpp setlocal tabstop=4 softtabstop=4 shiftwidth=4
+augroup END
+
+
 "--------------------------------------
 "Basic setting
 "--------------------------------------
@@ -116,9 +127,9 @@ set number
 set virtualedit=onemore
 " インデント関連
 set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set autoindent
 set smartindent
 " 不可視文字を可視化(タブが「>-」と表示される)
