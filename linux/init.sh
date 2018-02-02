@@ -1,5 +1,2 @@
-rm -f ~/.vimrc
-rm -f ~/.toml
-
-ln -s ./_vimrc ~/.vimrc
-ln -s ./.toml ~/.toml
+ln -s -f ~/dotfiles/win/_vimrc ~/.vimrc
+ln -s ~/dotfiles/win/.toml ~/.toml
