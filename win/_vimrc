@@ -36,7 +36,7 @@ endfunction
 if &compatible
   set nocompatible
 endif
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+"set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
 " プラグインが実際にインストールされるディレクトリ
 let s:dein_dir = expand('~/.cache/dein')
@@ -44,12 +44,12 @@ let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 " dein.vim がなければ github から落としてくる
-if &runtimepath !~# '/dein.vim'
+"if &runtimepath !~# '/dein.vim'
   if !isdirectory(s:dein_repo_dir)
     execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
   endif
   execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
-endif
+"endif
 
 " 設定開始
 if dein#load_state(s:dein_dir)
@@ -191,6 +191,8 @@ nnoremap sH <C-w>H
 nmap <C-v> <C-v>
 "コマンド入力ではC-vでペースト
 cmap <C-v> <C-v>
+"ノーマルモードでC-aでインクリメント
+nmap <C-a> <C-a>
 
 " 新しいウィンドウを下に開く
 set splitbelow
