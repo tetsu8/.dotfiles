@@ -1,2 +1,2 @@
-ln -s -f ~/dotfiles/win/_vimrc ~/.vimrc
-ln -s ~/dotfiles/win/.toml ~/.toml
+ln -s -f ~/dotfiles/.vimrc ~/.vimrc
+ln -s -f ~/dotfiles/.toml ~/.toml
