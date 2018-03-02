@@ -162,6 +162,12 @@ nnoremap k gk
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 "折り返ししない
 set nowrap
+" 新しいウィンドウを下に開く
+set splitbelow
+" 新しいウィンドウを右に開く
+set splitright
+" スクロール時のoffset
+set scrolloff=5
 
 "--------------------------------------
 " Search
@@ -198,17 +204,16 @@ nnoremap sJ <C-w>J
 nnoremap sK <C-w>K
 nnoremap sL <C-w>L
 nnoremap sH <C-w>H
-"ノーマルではC-vで矩形選択
+"nomal mode C-vで矩形選択
 nmap <C-v> <C-v>
-"コマンド入力ではC-vでペースト
+"command mode C-vでペースト
 cmap <C-v> <C-v>
-"ノーマルモードでC-aでインクリメント
+"nomal mode C-aでインクリメント
 nmap <C-a> <C-a>
-
-" 新しいウィンドウを下に開く
-set splitbelow
-" 新しいウィンドウを右に開く
-set splitright
+"nomal mode C-fで1ページ上へ
+nmap <C-f> <C-f>
+"0で改行を挿入
+nnoremap 0 :<C-u>call append(expand('.'), '')<Cr>j
 
 "--------------------------------------
 "Vaffle
@@ -216,14 +221,18 @@ set splitright
 let g:vaffle_auto_cd=1
 let g:vaffle_show_hidden_files=1
 
-
 "--------------------------------------
 "auto ctag
 "--------------------------------------
 let g:auto_ctags=0
-let g:auto_ctags_directory_list = ['.svn']
-let g:auto_ctags_tags_name = 'tags'
-let g:auto_ctags_tags_args = '--tag-relative --recurse --sort=yes'
+let g:auto_ctags_directory_list=['.git']
+let g:auto_ctags_tags_name='tags'
+let g:auto_ctags_tags_args='--tag-relative --recurse --sort=yes'
+
+"--------------------------------------
+"WinResizer
+"--------------------------------------
+let g:winresizer_start_key='<C-w>'
 
 "--------------------------------------
 "Unite

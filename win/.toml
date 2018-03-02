@@ -7,6 +7,8 @@ repo = 'Shougo/unite.vim'
 #unite用
 [[plugins]]
 repo = 'Shougo/neomru.vim'
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
 #File exproler
 [[plugins]]
 repo = 'cocopon/vaffle.vim'
