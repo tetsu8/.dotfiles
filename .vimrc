@@ -92,6 +92,7 @@ augroup END
 set encoding=utf-8
 scriptencoding utf-8
 set fenc=utf-8
+set fileformats=unix,mac,dos
 set fileencodings=utf-8,cp932
 "IMEをDefaultでoff
 set iminsert=0
@@ -113,10 +114,13 @@ set autoread
 set hidden
 " 入力中のコマンドをステータスに表示する
 set showcmd
-"補完を有効化
+" 補完を有効化
 set wildmenu
-"undofileの保存先変更
+" undofileの保存先変更
 set undodir=~/AppData/Local/Temp
+" 開いたファイルのディレクトリに移動する
+" :echo exist("+autochdir") == 1の場合のみ
+set autochdir
 " 行番号を表示
 set number
 " 現在の行を強調表示(横)
@@ -134,7 +138,7 @@ set autoindent
 set smartindent
 " 不可視文字を可視化(タブが「>-」と表示される)
 set list listchars=tab:»-,trail:_,eol:~,extends:>,precedes:<,nbsp:%
-"全角スペースをハイライト表示
+" 全角スペースをハイライト表示
 function! ZenkakuSpace()
     highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
 endfunction
@@ -158,9 +162,9 @@ set wildmode=list:longest
 " 折り返し時に表示行単位での移動できるようにする
 nnoremap j gj
 nnoremap k gk
-"文字コードと改行コードステータスバーに表示
+" 文字コードと改行コードステータスバーに表示
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
-"折り返ししない
+" 折り返ししない
 set nowrap
 " 新しいウィンドウを下に開く
 set splitbelow
@@ -168,6 +172,8 @@ set splitbelow
 set splitright
 " スクロール時のoffset
 set scrolloff=5
+" 保存時に行末スペース削除
+autocmd BufWritePre * :%s/\s\+$//ge
 
 "--------------------------------------
 " Search
@@ -229,6 +235,11 @@ let g:auto_ctags_directory_list=['.git']
 let g:auto_ctags_tags_name='tags'
 let g:auto_ctags_tags_args='--tag-relative --recurse --sort=yes'
 
+"定義元が複数ある場合一覧表示
+nnoremap <C-]> g<C-]>
+"Pathは環境依存
+au BufNewFile,BufRead *.cs set tags=C:\work\BF-X\tags
+
 "--------------------------------------
 "WinResizer
 "--------------------------------------
@@ -258,4 +269,4 @@ nnoremap [unite]m :<C-u>Unite file_mru<CR>
 nnoremap [unite]l :<C-u>Unite line<CR>
 nnoremap [unite]h :<C-u>Unite history/yank<CR>
 nnoremap [unite]u :<C-u>Unite file_mru buffer<CR>
-nnoremap [unite]cf ;<C-u>Unite file<CR>
+nnoremap [unite]cf :<C-u>Unite file<CR>
