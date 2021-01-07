@@ -94,7 +94,6 @@ scriptencoding utf-8
 set fenc=utf-8
 set fileformats=unix,mac,dos
 set fileencodings=utf-8,cp932
-set guifont=Cica:h14
 "IMEをDefaultでoff
 set iminsert=0
 set imsearch=-1

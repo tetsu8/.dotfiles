@@ -11,7 +11,7 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=b
 
-set guifont=MyricaM_M:h12
+set guifont=Cica:h14
 
 "起動時最大化:
 au GUIEnter * simalt ~x
